@@ -1,0 +1,15 @@
+name: HungerGames-Setup
+author: Merlin Osayimwen <merlinosayimwen@gmail.com>
+version: 1.0.0
+description: >
+  Tool to configure the arenas. Only used for the staff.
+
+main: net.twerion.hungergames.setup.SetupPlugin
+
+commands:
+  setup:
+    description: >
+      Used to setup an arena. Can be used by multiple players at a time to
+      configure the active setup. There may only be one setup at a time.
+    permission: hungergames.setup
+    aliases: [configure, hg-setup]

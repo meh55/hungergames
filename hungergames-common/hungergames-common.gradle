@@ -1,0 +1,19 @@
+plugins {
+  id 'java'
+}
+
+group 'net.twerion.armada'
+version '1.0.0'
+
+compileJava {
+  sourceCompatibility = '1.8'
+  targetCompatibility = '1.8'
+}
+
+dependencies {
+  implementation 'com.google.inject:guice:4.0'
+  implementation 'com.google.code.findbugs:jsr305:3.0.2'
+  implementation 'com.amihaiemil.web:eo-yaml:2.0.1'
+  implementation 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+  testImplementation 'junit:junit:4.12'
+}

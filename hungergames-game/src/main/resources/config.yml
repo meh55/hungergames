@@ -1,0 +1,8 @@
+teams:
+  - id: Team-1
+    members:
+      - 8d3eac90-218b-4547-a1dd-2b2210350e78
+      - bbdd9ffd-811b-4bd4-922d-83b398fa1dec
+  - id: Team-2
+    members:
+      - 5821fab9-7451-4546-8f67-4a5a62f4116b

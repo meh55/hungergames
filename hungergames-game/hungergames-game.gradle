@@ -1,0 +1,42 @@
+plugins {
+  id 'java'
+  id 'com.github.johnrengelman.shadow' version '4.0.4'
+}
+
+group 'net.twerion.armada'
+version '1.0.0'
+
+sourceCompatibility = '1.8'
+
+compileJava {
+  sourceCompatibility = '1.8'
+  targetCompatibility = '1.8'
+}
+
+configurations {
+  include
+
+  runtime.exclude group: 'org.spigotmc'
+  runtime.exclude group: 'com.google.guava'
+}
+
+repositories {
+  maven {
+    url = 'https://dl.bintray.com/luca98/plugins/'
+  }
+}
+
+dependencies {
+  implementation project(':hungergames-common')
+
+  implementation 'com.google.inject:guice:4.0'
+
+  implementation 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+
+  implementation 'com.google.code.findbugs:jsr305:3.0.2'
+
+  //implementation 'me.tigerhix.lib:scoreboard:1.0.1-SNAPSHOT'
+  // implementation 'io.github.theluca98:TextAPI:1.8.8-SNAPSHOT'
+
+  testImplementation 'junit:junit:4.12'
+}

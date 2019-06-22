@@ -1,0 +1,17 @@
+if (!JavaVersion.current().java8Compatible) {
+  throw new GradleException(
+    message = "Version must be Java-8 Compatible"
+  )
+}
+rootProject.name = 'hungergames-parent'
+
+include 'hungergames-common'
+include 'hungergames-setup'
+include 'hungergames-game'
+
+rootProject.children.each { project ->
+  project.buildFileName = "${project.name}.gradle"
+  assert project.projectDir.isDirectory()
+  assert project.buildFile.exists()
+  assert project.buildFile.isFile()
+}

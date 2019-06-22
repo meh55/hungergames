@@ -1,0 +1,11 @@
+group 'net.twerion.armada'
+version '1.0.0'
+
+subprojects {
+  repositories {
+    google()
+    mavenCentral()
+    mavenLocal()
+    maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
+  }
+}

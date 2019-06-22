@@ -1,0 +1,51 @@
+name: HungerGames
+description: >
+  Minecraft version of the Hunger Games. There are two available modes
+  in which the plugin can run in:
+    - Tournament Mode
+    - Normal Mode
+  When run in Tournament Mode, the game has to be started manually, the
+  tablist will show points of every tributes. Points are behaving as the
+  tournament mode document describes it. Normal mode on the other hand
+  will look and feel like a usual Minigame.
+author: Merlin Osayimwen <merlinosayimwen@gmail.com>
+version: 1.0.0
+
+main: net.twerion.hungergames.HungerGamesPlugin
+
+prefix: Hunger-Games
+api-version: 1.8.8
+
+commands:
+  start:
+    description: >
+      Called to start the match after a delay of 10 seconds.
+      May only be called once and only in the Waiting State.
+      Players may still leave and join while the game is
+      begin started and after the 10 seconds, every online
+      player is a Tribute in the match. This command is required
+      if the 'game.kind' setting is 'tournament'.
+    usage: start
+    aliases:
+      - forcestart
+      - begin
+    permission: hungergames.command.start
+
+  supply:
+    description: >
+      Spawns an instant supply drop at the block the player is looking at.
+    usage: supply
+      - supplydrop
+      - spawnsupply
+    permission: hungergames.command.supply
+permissions:
+  hungergames.command.start:
+    description: >
+      Permission required to start the game during Waiting State.
+      This permission should be given only to trusted players.
+      See 'start' command.
+    default: op
+  hungergames.command.supply:
+    description: >
+      Permission required to spawn a supply drop.
+    default: op
